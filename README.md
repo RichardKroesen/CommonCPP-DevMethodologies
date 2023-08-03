@@ -1,4 +1,9 @@
 # Dev_Operational_Tools
+
+Common Embedded Systems Engineering CPP software applications are found here. 
+Like patterns, configurations and best-practises. 
+
+# Legacy...
 Specifically for Embedded applications.
 
 Short planned tools overview:
