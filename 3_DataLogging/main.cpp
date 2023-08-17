@@ -2,8 +2,10 @@
 #include <fstream>
 
 class DataStorage {
+private:
+    using stringType = std::string;
 public:
-    static void saveData(const std::string& filename, const std::string& data) {
+    static inline void saveData(const stringType& filename, const stringType& data) {
         std::ofstream outputFile(filename);        
         if (outputFile.is_open()) {
             outputFile << data;
@@ -15,7 +17,7 @@ public:
         }
     }
 
-    static std::string loadData(const std::string& filename) {
+    static inline stringType loadData(const std::string& filename) {
         std::string data;
         std::ifstream inputFile(filename);
         if (inputFile.is_open()) {
@@ -29,9 +31,8 @@ public:
 };
 
 int main() {
-    std::string filename = "data.txt";
-    std::string data = "This is Jonh.";
-    std::string dataOut = "Error!";
+    std::string filename = "log_data.txt";
+    std::string data = "This is a logging demo.";
 
     DataStorage::saveData(filename, data);
     std::cout << DataStorage::loadData(filename) << std::endl;
