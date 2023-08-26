@@ -30,10 +30,11 @@ public:
     }
 };
 
-int main() {
+int main(void) {
     std::string filename = "log_data.txt";
-    std::string data = "This is a logging demo.";
+    std::string data = "Error: Default text saved.";
 
+    std::cin >> data;
     DataStorage::saveData(filename, data);
     std::cout << DataStorage::loadData(filename) << std::endl;
     return 0;
