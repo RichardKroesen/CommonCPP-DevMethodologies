@@ -6,6 +6,7 @@ add_executable(ExceptionHandler ./1_ExceptionHandling/exception_handle.cpp)
 add_executable(Underlying ./2_toUnderlying/to_underlying_example.cpp)
 add_executable(DataLogging ./3_DataLogging/main.cpp)
 add_executable(FF_Converter ./4_FloatingFixed-Converter/main.cpp)
+add_executable(NumericMapping ./6_NumericRangeMapping/main.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
