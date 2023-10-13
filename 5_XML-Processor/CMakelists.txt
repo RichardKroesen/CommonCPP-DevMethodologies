@@ -1,0 +1,23 @@
+include(FetchContent)
+
+FetchContent_Declare(
+  pugixml
+  GIT_REPOSITORY https://github.com/zeux/pugixml.git
+  GIT_TAG v1.14
+)
+
+FetchContent_GetProperties(pugixml)
+
+if(NOT pugixml_POPULATED)
+  FetchContent_Populate(pugixml)
+  add_subdirectory(
+    ${pugixml_SOURCE_DIR}
+    ${pugixml_BINARY_DIR}  # Specify the binary directory
+  )
+endif()
+
+add_executable(YourExecutable main.cpp)
+target_link_libraries(YourExecutable PRIVATE pugixml)
+
+configure_file(example.xml ${CMAKE_BINARY_DIR}/example.xml COPYONLY)
+

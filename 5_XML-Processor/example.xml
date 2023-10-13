@@ -1,0 +1,5 @@
+<mainBody>
+    <element name="sensor1" type="humidity">56%</element>
+    <element name="sensor2" type="humidity">99%</element>
+    <element name="sensor3" type="temperature">16.6</element>
+</mainBody>
